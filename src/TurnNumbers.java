@@ -3,13 +3,13 @@ import java.util.List;
 
 public class TurnNumbers {
     public static void main(String[] args) {
-        List<Integer> arr = elvesPlayedUntil(2020);
-        for (int i : arr) {
+        List<Integer> list = elvesPlayedUntilPart1(2020);
+        for (int i : list) {
             System.out.println(i + ", ");
         }
     }
 
-    private static List<Integer> elvesPlayedUntil(int limit) {
+    private static List<Integer> elvesPlayedUntilPart1(int limit) {
         List<Integer> list = new ArrayList<>();
 //        list.add(0);
 //        list.add(3);
@@ -41,12 +41,22 @@ public class TurnNumbers {
 //        list.add(1);
         // 438
 
-        list.add(3);
-        list.add(1);
-        list.add(2);
+//        list.add(3);
+//        list.add(1);
+//        list.add(2);
         // 1836
 
-        for (int i = 3; i < limit; i++) {
+//        12,20,0,6,1,17,7
+        list.add(12);
+        list.add(20);
+        list.add(0);
+        list.add(6);
+        list.add(1);
+        list.add(17);
+        list.add(7);
+
+
+        for (int i = 7; i < limit; i++) {
             int prev = list.get(i - 1);
 
             if (occursMoreThanOnce(list, prev)) {
